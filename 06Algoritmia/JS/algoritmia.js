@@ -1,3 +1,23 @@
+// funcionn para invertir palabras
+function invertir_(){
+
+    var p1_input = document.getElementById('p1_input').value;
+    
+const string = p1_input;
+
+function reverseString(str) {
+  let arrStr = str.split("");
+
+  return arrStr.reverse().join("");
+}
+
+reverseString(string); // esto retorna la palabra invertida
+    
+    
+    document.getElementById('p1-output').textContent = 'La Palabra invertida es: ' + reverseString(string);
+    alert("ingresaste la palabra:  " + p1_input )
+    }
+
 //vamos a obtener todos los valores por parte de los input
 function problema2(){
 
@@ -49,3 +69,51 @@ function problema2(){
     document.querySelector('#p2-output').textContent = 'Producto Escalar Minimo: ' + p2_producto;
     
     }
+
+    function caract_(){
+
+        var p3_input = document.getElementById('p3_input').value;
+        
+
+
+        function contarCaracteres(str) {
+            //Pasamos la cadena a minusculas(por si lo necesitas)
+            //str = str.toLowerCase()
+            //quitamos los espacios en blanco
+            str = str.replace(/\s/g, "");
+            
+            function cleanChar(str, char) {
+                console.log('cleanChar()'); 
+            while (true) {
+                var result_1 = str.replace(char, '');
+                if (result_1 === str) {
+                    break;
+                }
+                str = result_1;
+            }
+            return str;
+        }
+        var str = p3_input;
+        var result = cleanChar(str, ',');
+        console.log('Origin: ' + str + ' | Result: ' + result);
+
+            final = {} //Donde guardamos los resultados
+            for(let char in str){ //Tomamos el indice de cada caracter
+              if(str[char] in final) { //Si ya existe, simplemente aumentamos el contador
+                  final[str[char]] = final[str[char]] + 1
+              } else { // Si no existe, lo inicializamos a 1
+                  final[str[char]] = 1
+              }
+          }
+            //Mostar los resultados
+            tmp = ``
+            Object.keys(final).forEach(function(letra){
+              tmp += `La cantidad de ${letra} es: ${final[letra]} \n`
+            })
+            return tmp
+          }
+          let para_contar = p3_input 
+   
+        document.getElementById('p3-output').textContent = contarCaracteres(para_contar);
+        alert("ingresaste las palabras:  " + p3_input )
+        }
