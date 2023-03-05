@@ -23,7 +23,7 @@ input[type="button"]{
   color: rgba(73,69,255,1);
   position: absolute;
   top: 548px;
-  left: 209px;
+  left: 509px;
   font-family: Actor;
   font-weight: Regular;
   font-size: 24px;
@@ -51,8 +51,8 @@ input[type="button"]{
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 315px;
-  left: 260px;
+  top: 215px;
+  left: 560px;
   overflow: hidden;
 }
 .v12471_22750 {
@@ -73,19 +73,7 @@ input[type="button"]{
 .name {
   color: rgb(16, 161, 28);
 }
-.v12486_23647 {
-  width: 225px;
-  height: 202px;
-  background: url("../images/v12486_23647.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
-  position: absolute;
-  top: 315px;
-  left: 973px;
-  overflow: hidden;
-}
+
 
 .selleccion1{
   
