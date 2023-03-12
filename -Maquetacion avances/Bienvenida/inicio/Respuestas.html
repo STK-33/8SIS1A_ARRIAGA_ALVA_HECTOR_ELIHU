@@ -4,18 +4,19 @@
     <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
     
-    <title>VER RESPUESTAS</title>
+    <title>Ver Respuestas</title>
     <script src="JS/inicio.js"></script>
     <script src="JS/entrar.js"></script>
     <script src="JS/formulario.js"></script>
     <script src="JS/docente.js"></script>
     <script src="JS/respuestas.js"></script>
+    <script src="JS/regresar.js"></script>
 </head>
 <body>
 
   <input type="button" value="Ver Respuestas"  onclick="respuesta()">
   <input type="button" value="Inicio"   onclick="entrar()">
-    <input type="button" value="Evaluar Docente"  onclick="docente()">
+    <input type="button" value="Evaluar"  onclick="docente()">
     <input type="button" value="Formulario"  onclick="formulario()">
     
     
@@ -53,14 +54,18 @@
       </select></p>
   </div>
 
-   <div class="enviar2">
+            <div class="enviar2">
             
             
             <p><input type="submit" value="BUSCAR" onclick="" /> 
             </p>
             </div>
 
-
+            <div class="enviar2">
+              
+              <p><input type="submit" value="Regresar" onclick="regresar()" /> 
+              </p>
+              </div>
  
 
 </body>

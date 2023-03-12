@@ -4,25 +4,28 @@
     <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
     
-    <title>Formulario</title>
+    <title>Borrar</title>
     <script src="JS/inicio.js"></script>
     <script src="JS/entrar.js"></script>
     <script src="JS/formulario.js"></script>
     <script src="JS/docente.js"></script>
     <script src="JS/respuestas.js"></script>
+    <script src="JS/borrar.js"></script>
+    <script src="JS/crear.js"></script>
+    <script src="JS/publicar.js"></script>
     <script src="JS/regresar.js"></script>
 </head>
 <body>
+  <input type="button" value="BORRAR"  onclick="borrar()">
+  <input type="button" value="CREAR"   onclick="crear()">
+    
+    <input type="button" value="PUBLICAR"  onclick="publicar()">
+    <input type="button" value="REPORTES"  onclick="">
 
-  <input type="button" value="Formulario"  onclick="formulario()">
-  <input type="button" value="Inicio"   onclick="entrar()">
-  <input type="button" value="Evaluar"  onclick="docente()">
-  <input type="button" value="Ver Respuestas"  onclick="respuesta()">
 
-
-    <div class="selleccion2">
-        <h4>Selecciona el formulario a responder .</h4>
-        <p><select name="Plantel">
+    <div class="borar-f">
+        <h4>Selecciona el formulario a borrar .</h4>
+        <p><select name="borrar-formulario">
           <option value=""></option>
           <option value="">FORMULARIO 2023_1_A</option>
           <option value="">FORMULARIO 2023_1_B</option>
@@ -35,32 +38,20 @@
         </select></p>
     </div>
     
-    <div class="selleccion3">
-      <h4>Selecciona el Periodo .</h4>
-      <p><select name="Plantel">
-        <option value=""></option>
-        <option value="">2023</option>
-        <option value="">2022</option>
-        <option value="">2021</option>
-        <option value="">2020</option>
-        <option value="">2019</option>
-        <option value="">2018</option>
-
-        
-      </select></p>
-  </div>
-
-   <div class="enviar2">
-            <h4>Responder Formulario</h4>
+    
+   <div class="borrar">
+            <h4>Borrar Formulario</h4>
             
-            <p><input type="submit" value="Responder Formulario" /> 
+            <p><input type="submit" value="Borrar Formulario" /> 
             </p>
             </div>
  
-            <div class="enviar2">
+            <div class="Regresar">
+              
               
               <p><input type="submit" value="Regresar" onclick="regresar()" /> 
               </p>
               </div>
+
 </body>
 </html>
