@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de formularios completados</title>
+    <script src="JS/inicio.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #7289f0;
+        }
+        th {
+            background-color: #6d76ee;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="entrar()" >Regresar</button>
+    <h1>Reporte de formularios completados</h1>
+  
+    <table>
+        <thead>
+            <tr>
+                <th>Periodo</th>
+                <th>#  de formularios resueltos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2021</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>57</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script>
+		alert("Descargar archivo PDF")
+        // Crear un nuevo documento PDF
+        const doc = new jsPDF();
+        
+        // Obtener la tabla como HTML
+        const table = document.querySelector('table').outerHTML;
+        
+        // Agregar la tabla al documento PDF
+        doc.fromHTML(table, 15, 27);
+        
+        // Descargar el archivo PDF
+        doc.save('REPORTE_FORMULARIOS.pdf');
+    </script>
+    
+</body>
+</html>

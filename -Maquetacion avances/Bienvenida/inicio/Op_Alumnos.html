@@ -1,0 +1,101 @@
+<!DOCTYPE html><html>
+    
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    
+    <title>Opinion Alumnos</title>
+    <script src="JS/inicio.js"></script>
+    <script src="JS/entrar.js"></script>
+    <script src="JS/formulario.js"></script>
+    <script src="JS/docente.js"></script>
+    <script src="JS/respuestas.js"></script>
+    <script src="JS/enviarFor.js"></script>
+</head>
+<body>
+
+  <input type="button" value="Evaluar"  onclick="docente()">
+  <input type="button" value="Ver Respuestas"  onclick="respuesta()">
+  <input type="button" value="Inicio"   onclick="entrar()">
+    <input type="button" value="Formulario"  onclick="formulario()">
+
+    <div class="selleccion1">
+        <h4>Selecciona el Plantel .</h4>
+        <p><select name="Plantel">
+          <option value=""></option>
+          <option value="">Zona rosa</option>
+          <option value="">Iztapalapa</option>
+          <option value="">Tlalpan</option>
+          <option value="">Tlanepantla</option>
+          <option value="">Toreo</option>
+          <option value="">Chalco</option>
+
+          
+        </select></p>
+    </div>
+    
+    <div class="selleccion2">
+      <h4>¿El docente muestra interés para que los estudiantes aprendan? .</h4>
+      <p><select name="">
+        <option value=""></option>
+        <option value="">Si</option>
+        <option value="">No</option>
+      
+      </select></p>
+  </div>
+   
+
+  <div class="selleccion3">
+    <h4>¿El docente tiene una buena relación con los estudiantes en el aula de clase? .</h4>
+    <p><select name="Plantel">
+      <option value=""></option>
+      <option value="">Si</option>
+      <option value="">No</option>
+    
+    </select></p>
+</div>
+
+<div class="selleccion3">
+  <h4>¿El docente respeta la dignidad humana del estudiante y jamás acude a seleccionar expresiones o sátiras que buscan humillar 
+    por sus resultados académicos o lo degrada por sus condiciones socioeconómicas sexo, creencias religiosas o politicas o forma de vestir? .</h4>
+  <p><select name="Plantel">
+    <option value=""></option>
+    <option value="">Si</option>
+    <option value="">No</option>
+  
+  </select></p>
+</div>
+
+<div class="selleccion4">
+  <h4>¿El profesor relaciona los saberes enseñados con el programa de estudio?
+    .</h4>
+  <p><select name="Plantel">
+    <option value=""></option>
+    <option value="">Si</option>
+    <option value="">No</option>
+  
+  </select></p>
+</div>
+
+<div class="selleccion5">
+  <h4>¿El profesor indaga los conocimientos previos de los estudiantes frente al tema que enseña?
+    .</h4>
+  <p><select name="Plantel">
+    <option value=""></option>
+    <option value="">Si</option>
+    <option value="">No</option>
+  
+  </select></p>
+</div>
+        
+            <div class="enviar">
+            
+           
+            <p><input type="button" value="Enviar" onclick="enviarFor()"/> 
+            </p>
+             <p><input type="submit" value="Regresar" onclick="entrar()" /> 
+            </p>
+            </div>
+           
+</body>
+</html>

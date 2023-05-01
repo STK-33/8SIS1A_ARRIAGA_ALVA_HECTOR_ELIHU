@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+    
+}
+
+form{
+    background-image: url(../images/LOGO-UTC-COLOR.png);
+width: 501px;
+height: 501px;
+background-color: black;
+padding-top: 20px;
+margin: 60px auto;
+
+border-top-right-radius: 21px ;
+border-bottom-left-radius: 21px;
+
+box-shadow: -12px 21px 15px 12px rgb(33, 8, 146);
+
+}
+
+body{
+    background-image: url(../images/fondo2.jpg);
+    background-size: cover;
+    color: rgb(41, 238, 179);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+h1{
+
+    color: white;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 30px;
+    
+}
+
+input{
+
+    font-size: 15px;
+    padding: 9px;
+    display: flex;
+    margin: 12px auto;
+}
+
+
+label{
+    color: white;
+    font-size: 21px;
+    text-align: center;
+    display: block;
+    margin: 12px auto;
+}
+
+input[type="button"]{
+
+color: white;
+width: 120px;
+margin-top: 21px;
+font-size: 15px;
+display: block;
+background-color: blue;
+cursor: pointer;
+
+}
+
+input[type="button"]:hover{
+
+    
+    background-color: green;
+    
+    
+    }
+

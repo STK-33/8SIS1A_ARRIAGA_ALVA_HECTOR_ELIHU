@@ -1,0 +1,109 @@
+<!DOCTYPE html><html>
+    
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    
+    <title>Formulario</title>
+    <script src="JS/inicio.js"></script>
+    <script src="JS/entrar.js"></script>
+    <script src="JS/formulario.js"></script>
+    <script src="JS/docente.js"></script>
+    <script src="JS/respuestas.js"></script>
+    <script src="JS/regresar.js"></script>
+    <script src="JS/enviarFor.js"></script>
+	<script src="JS/crear.js"></script>
+	<script src="JS/borrar.js"></script>
+    <script src="JS/publicar.js"></script>
+</head>
+<body>
+
+  <input type="button" value="Formulario"  onclick="formulario()">
+  <input type="button" value="Inicio"   onclick="entrar()">
+  <input type="button" value="Evaluar"  onclick="docente()">
+  <input type="button" value="Ver Respuestas"  onclick="respuesta()">
+
+
+  <div class="container">
+		<h2>Selecciona un Formulario</h2>
+		<form enctype="multipart/form-data" id="formArchivo">
+			<div class="form-group">
+				<label for="archivo">Seleccionar Formulario:</label>
+				<input type="file" name="archivo" id="archivo" class="form-control-file" required>
+			</div>
+			<button type="submit" class="btn btn-primary">Cargar Formulario</button>
+		</form>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <div class="container">
+		<h2>Responde el Formulario</h2>
+		
+
+		<table class="table table-bordered" id="tablaPreguntas">
+			<thead>
+				<tr>
+					<th>Pregunta</th>
+					<th>Opciones</th>
+					<th>Respuesta</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Aquí se agregarán las filas dinámicamente -->
+				
+			</tbody>
+		</table>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// Leer el archivo JSON seleccionado por el usuario
+			$("#formArchivo").submit(function(event){
+				event.preventDefault();
+				var archivo = $("#archivo")[0].files[0];
+				var lector = new FileReader();
+				lector.onload = function(e){
+					// Parsear el contenido del archivo como JSON
+					var preguntas = JSON.parse(e.target.result);
+
+					// Agregar cada pregunta a la tabla
+					$.each(preguntas, function(index, pregunta){
+						var fila = '<tr>'+
+										'<td>'+pregunta.pregunta+'</td>'+
+										'<td>'+pregunta.opciones.join(", ")+'</td>'+
+										
+										'<td><select name="respuesta" class="form-control"><option value="selecciona una opcion">Selecciona una Opcion</option><option value="si">Sí</option><option value="no">No</option></select></td>'+
+                   						
+									'</tr>';
+						$("#tablaPreguntas tbody").append(fila);
+					});
+				};
+				lector.readAsText(archivo);
+			});
+		});
+	</script>
+
+
+   <div class="enviar2">
+            
+            
+            <p><input type="submit" value="Responder Formulario" onclick="enviarFor()"/> 
+            </p>
+            </div>
+ 
+            <div class="enviar2">
+              
+              <p><input type="submit" value="Regresar" onclick="regresar()" /> 
+              </p>
+              </div>
+</body>
+</html>

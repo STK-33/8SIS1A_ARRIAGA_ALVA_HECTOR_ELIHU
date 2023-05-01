@@ -1,0 +1,73 @@
+<!DOCTYPE html><html>
+    
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    
+    <title>Ver Respuestas</title>
+    <script src="JS/inicio.js"></script>
+    <script src="JS/entrar.js"></script>
+    <script src="JS/formulario.js"></script>
+    <script src="JS/docente.js"></script>
+    <script src="JS/respuestas.js"></script>
+    <script src="JS/regresar.js"></script>
+    <script src="JS/buscarfor.js"></script>
+</head>
+<body>
+
+  <input type="button" value="Ver Respuestas"  onclick="respuesta()">
+  <input type="button" value="Inicio"   onclick="entrar()">
+    <input type="button" value="Evaluar"  onclick="docente()">
+    <input type="button" value="Formulario"  onclick="formulario()">
+    
+    
+  
+
+    <h1>---------------------------------------</h1>
+    <h1>BUSCAR FORMULARIOS</h1>
+    <div class="selleccion2">
+        <h4>Selecciona el formulario que desea consultar.</h4>
+        <p><select name="Plantel">
+          <option value=""></option>
+          <option value="">FORMULARIO  A</option>
+          <option value="">FORMULARIO  B</option>
+          <option value="">FORMULARIO  C</option>
+          <option value="">FORMULARIO  D</option>
+          <option value="">FORMULARIO  E</option>
+         
+
+          
+        </select></p>
+    </div>
+    
+    <div class="selleccion3">
+      <h4>Selecciona el Periodo .</h4>
+      <p><select name="Plantel">
+        <option value=""></option>
+        <option value="">2023</option>
+        <option value="">2022</option>
+        <option value="">2021</option>
+        <option value="">2020</option>
+        <option value="">2019</option>
+        <option value="">2018</option>
+
+        
+      </select></p>
+  </div>
+
+            <div class="enviar2">
+            
+            
+            <p><input type="submit" value="BUSCAR" onclick="buscarfor()" /> 
+            </p>
+            </div>
+
+            <div class="enviar2">
+              
+              <p><input type="submit" value="Regresar" onclick="regresar()" /> 
+              </p>
+              </div>
+ 
+
+</body>
+</html>

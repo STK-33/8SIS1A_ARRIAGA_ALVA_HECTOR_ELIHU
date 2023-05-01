@@ -1,0 +1,109 @@
+<!DOCTYPE html><html>
+    
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+    
+    <title>OPINION ALUMNOS</title>
+    <script src="JS/inicio.js"></script>
+    <script src="JS/entrar.js"></script>
+    <script src="JS/formulario.js"></script>
+    <script src="JS/docente.js"></script>
+    <script src="JS/respuestas.js"></script>
+</head>
+<body>
+
+  <input type="button" value="Evaluar Docente"  onclick="docente()">
+  <input type="button" value="Ver Respuestas"  onclick="respuesta()">
+  <input type="button" value="Inicio"   onclick="entrar()">
+    <input type="button" value="Formulario"  onclick="formulario()">
+
+    <div class="selleccion1">
+        <h4>Selecciona el Plantel .</h4>
+        <p><select name="Plantel" id="0">
+          <option value=""></option>
+          <option value="">Zona rosa</option>
+          <option value="">Iztapalapa</option>
+          <option value="">Tlalpan</option>
+          <option value="">Tlanepantla</option>
+          <option value="">Toreo</option>
+          <option value="">Chalco</option>
+
+          
+        </select></p>
+    </div>
+    
+    <div class="selleccion2">
+      <h4>¿El docente demuestra en el aula su capacidad de enseñar los saberes de su asignatura"? .</h4>
+      <p><select name="pregunta1" id="1">
+        <option value=""></option>
+        <option value="">Si</option>
+        <option value="">No</option>
+      
+      </select></p>
+  </div>
+   
+
+  <div class="selleccion3">
+    <h4>El docente promueve y facilita el aprendizaje de los contenidos de los estudiantes? .</h4>
+    <p><select name="pregunta2" id="2">
+      <option value=""></option>
+      <option value="">Si</option>
+      <option value="">No</option>
+    
+    </select></p>
+</div>
+
+<div class="selleccion4">
+  <h4>¿El docente demuestra dominio en su área o disciplina? .</h4>
+  <p><select name="pregunta3" id="3">
+    <option value=""></option>
+    <option value="">Si</option>
+    <option value="">No</option>
+  
+  </select></p>
+</div>
+
+<div class="selleccion5">
+  <h4>¿El profesor relaciona los saberes enseñados con el programa de estudio?
+    .</h4>
+  <p><select name="pregunta5" id="4">
+    <option value=""></option>
+    <option value="">Si</option>
+    <option value="">No</option>
+  
+  </select></p>
+</div>
+
+<div class="selleccion6">
+  <h4>¿El docente tiene una secuencia en los temas de los contenidos de la signatura?
+    .</h4>
+  <p><select name="pregunta6" id="5">
+    <option value=""></option>
+    <option value="">Si</option>
+    <option value="">No</option>
+  
+  </select></p>
+</div>
+<div class="selleccion7">
+  <h4>¿El docente ofrece a sus estudiantes una bibliografia de los temas de la asignatura?
+    .</h4>
+  <p><select name="pregunta7" id="6">
+    <option value=""></option>
+    <option value="">Si</option>
+    <option value="">No</option>
+  
+  </select></p>
+</div>
+            <div class="enviar">
+            
+            <p><input type="reset" value="Borrar" />
+              </p>
+            <p><input type="submit" value="Enviar" /> 
+            </p>
+             <p><input type="submit" value="Regresar" onclick="entrar()" /> 
+            </p>
+            </div>
+
+</body>
+</html>

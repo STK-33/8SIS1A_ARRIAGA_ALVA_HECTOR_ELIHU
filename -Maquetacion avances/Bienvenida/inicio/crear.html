@@ -1,0 +1,107 @@
+<!DOCTYPE html><html>
+    
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Actor&display=swap" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+    
+    <title>crear</title>
+    <script src="JS/inicio.js"></script>
+    <script src="JS/entrar.js"></script>
+    <script src="JS/formulario.js"></script>
+    <script src="JS/docente.js"></script>
+    <script src="JS/respuestas.js"></script>
+    <script src="JS/borrar.js"></script>
+    <script src="JS/publicar.js"></script>
+    <script src="JS/regresar.js"></script>
+    <script src="JS/guardarFormulario.js"></script>
+    <script src="JS/guardarPreguntas.js"></script>
+    <script src="JS/verPreguntas.js"></script>
+    <script src="JS/verformulario.js"></script>
+	<script src="JS/pdf.js"></script>
+ 
+ 
+</head>
+<body>
+
+  <input type="button" value="CREAR"   onclick="crear()">
+    <input type="button" value="BORRAR"  onclick="borrar()">
+    <input type="button" value="PUBLICAR"  onclick="publicar()">
+    <input type="button" value="REPORTES"  onclick="pdf()">
+    
+
+
+    
+
+    <div class="container">
+		<h2>Crear Formulario</h2>
+
+       
+
+		<form id="formulario" method="post" >
+			<!-- Botón para agregar nueva pregunta -->
+			<button type="button" class="btn btn-success" id="btnAgregar">Agregar pregunta</button>
+
+			<!-- Tabla para mostrar las preguntas -->
+			<table class="table table-bordered" id="tablaPreguntas">
+				<thead>
+					<tr>
+						<th>Pregunta</th>
+						<th>Opciones</th>
+						<th>Accion</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Aquí se agregarán las filas dinámicamente -->
+	
+				</tbody>
+			</table>
+
+			<!-- Botón para guardar las preguntas -->
+			<button type="submit" onclick="guardarPreguntas()" class="btn btn-primary">Guardar Formulario</button>
+			<!-- Botón para ir a la página de visualización de preguntas -->
+			<button type="button" onclick="verformularios()" class="btn btn-primary">Ver Formularios</button>
+            <button type="button" onclick="entrar()" class="btn btn-primary">Regresar</button>
+		</form>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			// Contador para identificar las preguntas
+			var contador = 0;
+
+			// Agregar una nueva pregunta
+			$("#btnAgregar").click(function(){
+				contador++;
+				var fila = '<tr>'+
+								'<td>'+
+									'<input type="text" class="form-control" name="pregunta'+contador+'" placeholder="Ingrese la pregunta" required>'+
+								'</td>'+
+								'<td>'+
+									'<textarea class="form-control" name="opciones'+contador+'" placeholder="Ingrese las opciones separadas por coma" required></textarea>'+
+								'</td>'+
+								'<td>'+
+									'<button type="button" class="btn btn-danger btnBorrar">Borrar</button>'+
+								'</td>'+
+							'</tr>';
+				$("#tablaPreguntas").append(fila);
+			});
+
+			// Borrar una pregunta
+			$(document).on("click", ".btnBorrar", function(){
+				$(this).closest("tr").remove();
+			});
+		});
+	</script>
+
+
+
+</body>
+</html>

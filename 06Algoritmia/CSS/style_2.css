@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+body{
+    background-image: url(../images/3.gif);
+    background-size: cover;
+    color: rgb(221, 233, 229);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+
+
+
+label{
+    color: white;
+    font-size: 21px;
+    text-align: center;
+    display: block;
+    margin: 12px auto;
+}
+
+input[type="button"]{
+
+color: white;
+width: 120px;
+margin-top: 21px;
+font-size: 15px;
+display: block;
+background-color: blue;
+cursor: pointer;
+
+}
+
+input[type="button"]:hover{
+
+    
+    background-color: green;
+    
+    
+    }
+
